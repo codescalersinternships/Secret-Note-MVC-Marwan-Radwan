@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+      .note-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 20px auto;
+      }
+      .note-container h2 {
+        margin-bottom: 10px;
+      }
+      .note-details {
+        margin-bottom: 15px;
+      }
+      .note-details p {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="note-container">
+      <h2>Note Details</h2>
+
+      <div class="note-details">
+        <p><strong>Note Text:</strong> {{ note.content }}</p>
+        <p><strong>Remaining Visits:</strong> {{ note.remaining_views }}</p>
+        <p><strong>Creation Date:</strong> {{ note.created_at }}</p>
+        <p><strong>Expiry Date:</strong> {{ note.expire_at }}</p>
+        <p><strong>Link:</strong> <a href="{{ link }}">{{ link }}</a></p>
+      </div>
+    </div>
+  </body>
+</html>
